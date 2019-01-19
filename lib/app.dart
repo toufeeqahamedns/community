@@ -10,7 +10,6 @@ class CommunityApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Community',
       theme: buildTheme(),
-      initialRoute: '/login',
       routes: {
         '/': (context) => HomeScreen(),
         '/login': (context) => LoginScreen(),
