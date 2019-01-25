@@ -35,6 +35,7 @@ class _StateWidgetState extends State<StateWidget> {
    FirebaseUser currentUser;
   SharedPreferences prefs;
   final GoogleSignIn googleSignIn = new GoogleSignIn();
+  
 
   @override
   void initState() {
