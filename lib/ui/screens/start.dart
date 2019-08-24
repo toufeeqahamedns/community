@@ -52,8 +52,8 @@ class StartScreenState extends State<StartScreen> {
       return new LoginScreen();
     } else {
       return _buildBottomNavigation(
-          //body: _buildNavigationsContent(),
-          );
+        //body: _buildNavigationsContent(),
+      );
     }
   }
 

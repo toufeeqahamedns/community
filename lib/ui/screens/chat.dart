@@ -286,7 +286,27 @@ Future uploadFile() async {
                         ),
                         clipBehavior: Clip.hardEdge,
                       )
-                    : Container(width: 35.0),
+                    : Material(
+                        child: CachedNetworkImage(
+                          placeholder: Container(
+                            child: CircularProgressIndicator(
+                              strokeWidth: 1.0,
+                              valueColor: AlwaysStoppedAnimation<Color>(themeColor),
+                            ),
+                            width: 35.0,
+                            height: 35.0,
+                            padding: EdgeInsets.all(10.0),
+                          ),
+                          imageUrl: document['imageUrl'],
+                          width: 35.0,
+                          height: 35.0,
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(18.0),
+                        ),
+                        clipBehavior: Clip.hardEdge,
+                      ),
                 document['type'] == 0
                     ? Container(
                         child: Text(
@@ -371,7 +391,11 @@ Future uploadFile() async {
   
   bool isLastMessageLeft(int index) {
     if ((index > 0 && listMessage != null && listMessage[index - 1]['idFrom'] == id) || index == 0) {
-      return true;
+      if (listMessage[index - 1]['idFrom'] == listMessage[index]['idFrom']){
+        return true;
+      } else {
+        return false;
+      }
     } else {
       return false;
     }

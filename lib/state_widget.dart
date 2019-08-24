@@ -1,4 +1,4 @@
-import 'dart:async';
+  import 'dart:async';
 import 'package:community/model/state.dart';
 import 'package:community/utils/auth.dart';
 import 'package:flutter/foundation.dart';
@@ -32,7 +32,7 @@ class StateWidget extends StatefulWidget {
 class _StateWidgetState extends State<StateWidget> {
   StateModel state;
   GoogleSignInAccount googleAccount;
-   FirebaseUser currentUser;
+  FirebaseUser currentUser;
   SharedPreferences prefs;
   final GoogleSignIn googleSignIn = new GoogleSignIn();
   
